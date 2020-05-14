@@ -24,5 +24,22 @@ def __str__(self):
  returns a string of the format: "A basket of [quantity goes here] [color goes here] apples." e.g. "A basket of 4 red apples." or "A basket
  of 50 blue apples." (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
  """
- 
+ class AppleBasket():
+    
+    def __init__(self, initColor, initQuantity):
+        self.apple_color = initColor
+        self.apple_quantity = initQuantity
+    
+    def increase(self):
+        self.apple_quantity += 1
+       
+    def __str__(self): 
+        return("A basket of {} {} apples.".format(self.apple_quantity, self.apple_color))
+
+test1 = AppleBasket("red", 500)
+print(test1)
+test2 = AppleBasket("green", 20)
+print(test2)
+test1.increase()
+print(test1)
  
